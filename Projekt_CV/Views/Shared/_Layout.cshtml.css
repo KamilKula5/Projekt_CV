@@ -48,3 +48,6 @@ button.accept-policy {
 .nav-item{
     margin-left: 3rem;
 }
+.navbar {
+    background-color: #8ecae6 !important;
+}
