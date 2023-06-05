@@ -1,0 +1,28 @@
+﻿body {
+}
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-weight: lighter;
+}
+.description{
+    width: 40%;
+}
+.lower-description{
+    margin-top: 3rem;
+}
+ul {
+    margin-top: 1rem;
+    list-style-type: none;
+    display: flex;
+    justify-content:center;
+}
+
+li {
+    width: 4rem;;
+    text-align: center;
+}
+.icon{
+    width: 3rem;
+}
