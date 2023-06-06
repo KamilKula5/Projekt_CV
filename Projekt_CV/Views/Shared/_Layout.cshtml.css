@@ -43,8 +43,13 @@ button.accept-policy {
   line-height: 60px;
 }
 .navbar-nav{
-    margin-left: 34rem;
+    margin-left: 30rem;
 }
+/*@media (max-width: 1073px) {
+    .navbar-nav {
+        margin-left: 25rem;
+    }
+}*/
 .nav-item{
     margin-left: 3rem;
 }

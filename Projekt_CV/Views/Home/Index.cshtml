@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Projekt_CV.Models.MailModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -17,32 +18,56 @@ matematyką, lubię uczyć się
 nowych rzeczy. Posługuję
 się językiem angielskim na
 poziomie B2.</p>
+<div class="buttons">
 <input type="button" value="Napisz do mnie" class="contactme-button"/>
 <input type="button" value="Moje projekty" class="my-projects-button"/>
+</div>
 <div class="social-media">
     <ul>
-        <li><img src="Images/facebook_icon.svg" class="icon"</li>
-        <li><img src="Images/instagram_icon.svg" class="icon"</li>
-        <li><img src="Images/linkedin_icon.svg" class="icon"</li>
-        <li><img src="Images/twitter_icon.svg" class="icon"</li>
+        <li><a href="facebook.com"><img src="Images/facebook_icon.svg" class="icon" /></a></li>
+        <li><a href="instagram.com"><img src="Images/instagram_icon.svg" class="icon" /></a></li>
+        <li><a href="linkedin.com"><img src="Images/linkedin_icon.svg" class="icon" /></a></li>
+        <li><a href="twitter.com"><img src="Images/twitter_icon.svg" class="icon" /></a></li>
     </ul>
 </div>
-<div class="portfolio">
-    <h3>Stworzone projekty</h3>
-</div>
-<div class="contact">
-    <div class="contact-left-text">
-    <h3>Napisz do mnie</h3>
-    <p class="contact-info">
-        Jestem otwarty na staż informatyczny lub oferty pracy, jeśli masz jakąś propozycję, jestem zainteresowany. Wypełnij formularz kontaktowy a odpiszę najszybciej jak to możliwe.
-    </p>
-    <a class="contact-mail" href="mailto:kamil3kk2134@gmail.com">
-        kamil3kk2134@gmail.com
-    </a>
-    </div> 
-    <div class="contact-form">
+
 
     </div>
-</div>
+    <div class="portfolio">
+        <h3>Stworzone projekty</h3>
+        <div class="projects">
+            
+        </div>
+    </div>
+    <div class="contact">
+        <div class="contact-left-text">
+            <h3>Napisz do mnie</h3>
+            <p class="contact-info">
+                Jestem otwarty na staż informatyczny lub oferty pracy, jeśli masz jakąś propozycję, jestem zainteresowany. Wypełnij formularz kontaktowy a odpiszę najszybciej jak to możliwe.
+            </p>
+            <a class="contact-mail" href="mailto:kamil3kk2134@gmail.com">
+                kamil3kk2134@gmail.com
+            </a>
+        </div>
+        <div class="contact-form">
+            <fieldset>
+                <legend>
+                    Wyślij maila!
+                </legend>
+                @using (Html.BeginForm())
+                {
+                    @Html.ValidationSummary()
+                    <p>From: </p>
+                    <p>@Html.TextBoxFor(m=>m.From, new {@class = "mail-form"})</p>
+                    <p>To: </p>
+                    <p>@Html.TextBoxFor(m=>m.To, new {@class = "mail-form"})</p>
+                    <p>Subject: </p>
+                    <p>@Html.TextBoxFor(m=>m.Subject, new {@class = "mail-form"})</p>
+                    <p>Body: </p>
+                    <p>@Html.TextAreaFor(m=>m.Body, new {@class = "mail-form"})</p>
+                    <input type="submit" value="Send" />
+                }
+            </fieldset>
+        </div>
     </div>
 </div>

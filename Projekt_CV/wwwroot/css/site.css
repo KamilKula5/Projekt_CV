@@ -20,3 +20,9 @@ html {
 body {
     margin-bottom: 60px;
 }
+.mail-form{
+    width: 18rem;
+}
+.navbar{
+    flex-wrap: wrap;
+}
