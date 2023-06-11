@@ -43,7 +43,6 @@ button.accept-policy {
   line-height: 60px;
 }
 .navbar-nav{
-    margin-left: 30rem;
 }
 /*@media (max-width: 1073px) {
     .navbar-nav {
@@ -55,4 +54,44 @@ button.accept-policy {
 }
 .navbar {
     background-color: #8ecae6 !important;
+}
+.navbar-collapse{
+    margin-left: 65%;
+}
+@media (max-width: 1374px) {
+    .navbar-collapse{
+        margin-left: 60%;
+    }
+}
+@media (max-width: 1208px) {
+    .navbar-collapse {
+        margin-left: 55%;
+    }
+}
+@media (max-width: 1078px) {
+    .navbar-collapse {
+        margin-left: 50%;
+    }
+}
+
+@media (max-width: 976px) {
+    .navbar-collapse {
+        margin-left: 45%;
+    }
+}
+@media (max-width: 890px) {
+    .navbar-collapse {
+        margin-left: 35%;
+    }
+}
+@media (max-width: 668px) {
+    .navbar-collapse {
+        margin-left: 23%;
+    }
+}
+@media (max-width: 575px) {
+    .navbar-collapse {
+        margin-left: auto;
+    }
+    
 }
