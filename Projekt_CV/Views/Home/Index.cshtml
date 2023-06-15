@@ -6,37 +6,58 @@
 
 <div class = "container">
 	<div class="description">
-	<h1>Kamil Kula</h1>
-	<h2 class="profession">Student 3 roku informatyki</h2>
-	<p class="lower-description">Jestem studentem III roku
-informatyki w Szkole
-Głównej Gospodarstwa
-Wiejskiego. Mam 21 lat.
-Interesuję się
-programowaniem i
-matematyką, lubię uczyć się
-nowych rzeczy. Posługuję
-się językiem angielskim na
-poziomie B2.</p>
-<div class="buttons">
-<input type="button" value="Napisz do mnie" class="contactme-button"/>
-<input type="button" value="Moje projekty" class="my-projects-button"/>
-</div>
-<div class="social-media">
-	<ul>
-		<li><a href="facebook.com"><img src="Images/facebook_icon.svg" class="icon" /></a></li>
-		<li><a href="instagram.com"><img src="Images/instagram_icon.svg" class="icon" /></a></li>
-		<li><a href="linkedin.com"><img src="Images/linkedin_icon.svg" class="icon" /></a></li>
-		<li><a href="twitter.com"><img src="Images/twitter_icon.svg" class="icon" /></a></li>
-	</ul>
-</div>
-
+		<div class="description-upper">
+		<h1>Kamil Kula</h1>
+		<h2 class="profession">Student 3 roku informatyki</h2>
+		<p class="lower-description">Jestem studentem III roku
+			informatyki w Szkole
+			Głównej Gospodarstwa
+			Wiejskiego. Mam 21 lat.
+			Interesuję się
+			programowaniem i
+			matematyką, lubię uczyć się
+			nowych rzeczy. Posługuję
+			się językiem angielskim na
+			poziomie B2.</p>
+			<div class="buttons">
+				<input type="button" value="Napisz do mnie" class="contactme-button"/>
+				<input type="button" value="Moje projekty" class="my-projects-button"/>
+			</div>
+			<div class="social-media">
+				<ul>
+					<li><a href="facebook.com"><img src="Images/facebook_icon.svg" class="icon" /></a></li>
+					<li><a href="instagram.com"><img src="Images/instagram_icon.svg" class="icon" /></a></li>
+					<li><a href="linkedin.com"><img src="Images/linkedin_icon.svg" class="icon" /></a></li>
+					<li><a href="twitter.com"><img src="Images/twitter_icon.svg" class="icon" /></a></li>
+				</ul>
+			</div>
+			</div>
+			<video width="760" height="660" autoplay loop muted>
+				<source src="~/Videos/BeginningVideo.mp4" type="video/mp4">
+				<source src="movie.ogg" type="video/ogg">
+				Your browser does not support the video tag.
+			</video>
 
 	</div>
 	<div class="portfolio">
 		<h3>Stworzone projekty</h3>
 		<div class="projects">
-
+			<div class="card" style="width: 38rem;">
+				<img src="~/Images/QuizApp.png" id="card-img"/>
+				<div class="card-body">
+					<h5 class="card-title">Quiz App</h5>
+						<p class="card-text">Aplikacja webowa umożliwiająca tworzenie testów abcd (dodawanie własnych pytań i odpowiedzi) i pozwalająca na łatwe zarządzanie dodanymi pytaniami i odpowiedziami. Aplikacja stworzona korzystając z technologii: HTML, CSS, JavaScript.</p>
+						<a href="https://github.com/KamilKula5/Quiz_app" class="btn btn-primary">Zobacz projekt</a>
+				</div>
+			</div>
+			<div class="card" id="card-second" style="width: 38rem;">
+				<img src="~/Images/MatrixCalculator.png" id="card-img"/>
+				<div class="card-body" id="card-body-matrix">
+					<h5 class="card-title">Kalkulator macierzy</h5>
+					<p class="card-text">Aplikacja desktopowa wykonująca operacje na macierzach 3x3 (dodawanie, odejmowanie, mnożenie). Aplikacja stworzona korzystając z technologii: Windows Forms i C#</p>
+					<a href="https://github.com/KamilKula5/KalkulatorMacierzy" class="btn btn-primary" id="second-button">Zobacz projekt</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	
@@ -63,9 +84,9 @@ poziomie B2.</p>
 							<p>@Html.TextBoxFor(m=>m.From, new {@class = "mail-form"})</p>*@
 							@*<p>To: </p>
 							<p>@Html.TextBoxFor(m=>m.To, new {@class = "mail-form"})</p>*@
-							<p>Subject: </p>
+							<p>Temat: </p>
 							<p>@Html.TextBoxFor(m=>m.Subject, new {@class = "mail-form"})</p>
-							<p>Body: </p>
+							<p>Treść: </p>
 							<p>@Html.TextAreaFor(m=>m.Body, new {@class = "mail-form"})</p>
 							<button type="submit" id="send" value="Send" asp-controller="SendMail" asp-action="Index">Wyślij</button>
 			}

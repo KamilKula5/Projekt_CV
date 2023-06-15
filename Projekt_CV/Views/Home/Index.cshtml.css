@@ -20,7 +20,48 @@ h3 {
 
 
 .description {
-    width: 50%;
+    display: flex;
+}
+@media (max-width: 1399px) {
+    .description {
+        display: flex;
+    }
+    
+    video {
+        width: 560px;
+    }
+}
+@media (max-width: 1199px) {
+    .description {
+        display: flex;
+    }
+
+    video {
+        width: 460px;
+    }
+}
+@media (max-width: 991px) {
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    video {
+        width: 100%;
+        height: auto;
+        margin: 2rem 0;
+    }
+    .social-media {
+        width: 100% !important;
+    }
+    .lower-description {
+        width: 100% !important;
+    }
+    .buttons{
+        text-align: center;
+    }
 }
 
 .lower-description {
@@ -47,13 +88,21 @@ li {
 .icon {
     width: 3rem;
 }
+.projects{
+    display: flex;
+    justify-content: space-between;
+}
+
+#card-second{
+    margin-left: 4rem;
+}
+
 
 .contactme-button {
     background-color: #219dbc;
     border-radius: 12px;
     border: 1px solid #18ab29;
     display: inline-block;
-    cursor: pointer;
     color: #ffffff;
     font-family: Arial;
     font-size: 20px;
@@ -67,7 +116,6 @@ li {
     border-radius: 12px;
     border: 1px solid #18ab29;
     display: inline-block;
-    cursor: pointer;
     color: #219dbc;
     font-family: Arial;
     font-size: 20px;

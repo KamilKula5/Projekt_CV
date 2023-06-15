@@ -5,6 +5,13 @@
 
 const contactMeButton = document.querySelector('.contactme-button');
 const contact = document.querySelector('.contact');
+const myProjectsButton = document.querySelector('.my-projects-button');
+const portfolio = document.querySelector('.portfolio');
+
 contactMeButton.addEventListener('click', () => {
     contact.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+})
+
+myProjectsButton.addEventListener('click', () => {
+    portfolio.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 })
