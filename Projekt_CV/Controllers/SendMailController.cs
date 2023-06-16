@@ -16,6 +16,7 @@ namespace Projekt_CV.Controllers
 			Console.WriteLine("wysssss");
 			if (ModelState.IsValid)
 			{
+				TempData["Success"] = "Wysłano";
 				Console.WriteLine("wyslano");
 				MailMessage mail = new MailMessage();
 				mail.To.Add("koncowyprojekt1@gmail.com");   //wyslij na ten mail
@@ -32,7 +33,8 @@ namespace Projekt_CV.Controllers
 				smtp.EnableSsl = true;
 				smtp.UseDefaultCredentials = false;
 				smtp.Send(mail);
-				return View("/Views/Home/Index.cshtml", _objModelMail);
+				ModelState.Clear();
+				return View("/Views/Home/Index.cshtml");
 			}
 			else
 			{

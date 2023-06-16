@@ -2,13 +2,14 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-weight: 800 !important;
 }
 
 a {
-  color: #0077cc;
+    color: #0077cc;
 }
 
 .btn-primary {
@@ -56,7 +57,7 @@ button.accept-policy {
     background-color: #8ecae6 !important;
 }
 .navbar-collapse{
-    margin-left: 65%;
+    margin-left: 60%;
 }
 @media (max-width: 1374px) {
     .navbar-collapse{
@@ -94,4 +95,10 @@ button.accept-policy {
         margin-left: auto;
     }
     
+}
+.nav-link {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
 }

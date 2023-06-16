@@ -70,7 +70,7 @@
 				Jestem otwarty na staż informatyczny lub oferty pracy, jeśli masz jakąś propozycję, jestem zainteresowany. Wypełnij formularz kontaktowy a odpiszę najszybciej jak to możliwe.
 			</p>
 			<a class="contact-mail" href="mailto:kamil3kk2134@gmail.com">
-				kamil3kk2134@gmail.com
+				koncowyprojekt1@gmail.com
 			</a>
 		</div>
 		<div class="contact-form">
@@ -87,7 +87,7 @@
 							<p>Temat: </p>
 							<p>@Html.TextBoxFor(m=>m.Subject, new {@class = "mail-form"})</p>
 							<p>Treść: </p>
-							<p>@Html.TextAreaFor(m=>m.Body, new {@class = "mail-form"})</p>
+							<p class="body-text-outer">@Html.TextAreaFor(m=>m.Body, new {@class = "mail-form-body"})</p>
 							<button type="submit" id="send" value="Send" asp-controller="SendMail" asp-action="Index">Wyślij</button>
 			}
 			</fieldset>
