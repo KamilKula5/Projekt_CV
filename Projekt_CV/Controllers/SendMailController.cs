@@ -13,14 +13,11 @@ namespace Projekt_CV.Controllers
 		[HttpPost]
 		public ViewResult Index(Projekt_CV.Models.MailModel _objModelMail)
 		{
-			Console.WriteLine("wysssss");
 			if (ModelState.IsValid)
 			{
 				TempData["Success"] = "Wysłano";
-				Console.WriteLine("wyslano");
 				MailMessage mail = new MailMessage();
-				mail.To.Add("koncowyprojekt1@gmail.com");   //wyslij na ten mail
-															//mail.From = new MailAddress(_objModelMail.From);
+				mail.To.Add("koncowyprojekt1@gmail.com");   //wyslij na ten mail															
 				mail.From = new MailAddress("example@gmail.com");
 				mail.Subject = _objModelMail.Subject;
 				string Body = _objModelMail.Body;
@@ -42,7 +39,6 @@ namespace Projekt_CV.Controllers
 						   .Where(y => y.Count > 0)
 						   .ToList();
 				Console.WriteLine(errors);
-				Console.WriteLine("nie udalo sie");
 				return View("/Views/Home/Index.cshtml");
 			}
 		}

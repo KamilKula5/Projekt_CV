@@ -2,7 +2,14 @@
 @{
 	ViewData["Title"] = "Home Page";
 }
-
+@if (TempData["Success"] != null)
+{
+	<div class="container d-flex justify-content-center">
+	<div class="alert alert-success text-center"  role="alert">
+		Wysłano!
+	</div>
+	</div>
+}
 
 <div class = "container">
 	<div class="description">
@@ -80,11 +87,13 @@
 				</legend>
 			@using (Html.BeginForm())
 			{
-							<p>Temat: </p>
-							<p>@Html.TextBoxFor(m=>m.Subject, new {@class = "mail-form"})</p>
-							<p>Treść: </p>
+							<p class="topic">Temat: </p>
+							<p>@Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger" })</p>
+							<p>@Html.TextBoxFor(m=>m.Subject, new {@class = "mail-form"})</p>							
+							<p class="body-text">Treść: </p>
+							<p>@Html.ValidationMessageFor(m => m.Body, "", new { @class = "text-danger" })</p>
 							<p class="body-text-outer">@Html.TextAreaFor(m=>m.Body, new {@class = "mail-form-body"})</p>
-							<button type="submit" id="send" value="Send" asp-controller="SendMail" asp-action="Index">Wyślij</button>
+							<button type="submit" id="send" value="Send" asp-controller="SendMail" asp-action="Index">Wyślij<img src="Images/send.svg" id="send-img"/></button>
 			}
 			</fieldset>
 		</div>
