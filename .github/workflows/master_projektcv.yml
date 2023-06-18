@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'ProjektCV'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CEDCB1ED3BAF46679EE5542EB8981C70 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D4D077B99A5D4EEF899E0F22E10182B5 }}
           package: .
