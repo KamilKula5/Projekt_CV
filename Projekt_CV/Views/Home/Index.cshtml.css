@@ -193,3 +193,8 @@ li {
         font-size: 1.5rem;
     }
 }
+@media (max-width: 409px) {
+    .contact-mail {
+        font-size: 1.2rem;
+    }
+}
