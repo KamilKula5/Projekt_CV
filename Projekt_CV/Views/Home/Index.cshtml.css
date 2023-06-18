@@ -176,14 +176,20 @@ li {
     font-size: 1.2rem;
 }
 
-@media (max-width: 503px) {
+@media (max-width: 522px) {
     .my-projects-button {
+        margin-top: 1rem;
         margin-left: 0rem !important;
     }
 }
 
-@media (min-width: 504px) {
+@media (min-width: 523px) {
     .my-projects-button {
         margin-left: 2rem !important;
+    }
+}
+@media (max-width: 587px) {
+    .contact-mail {
+        font-size: 1.5rem;
     }
 }

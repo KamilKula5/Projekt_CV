@@ -89,7 +89,7 @@
 			{
 							<p class="topic">Temat: </p>
 							<p>@Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger" })</p>
-							<p>@Html.TextBoxFor(m=>m.Subject, new {@class = "mail-form"})</p>							
+							<p class="topic-text-outer">@Html.TextBoxFor(m=>m.Subject, new {@class = "mail-form"})</p>							
 							<p class="body-text">Treść: </p>
 							<p>@Html.ValidationMessageFor(m => m.Body, "", new { @class = "text-danger" })</p>
 							<p class="body-text-outer">@Html.TextAreaFor(m=>m.Body, new {@class = "mail-form-body"})</p>

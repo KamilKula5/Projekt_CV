@@ -95,3 +95,14 @@ form {
         margin-left: 3rem;
     }
 }
+@media (max-width: 587px) {
+    .contact-mail{
+        font-size: 1.2rem;
+    }
+    .mail-form{
+        width: 300px;
+    }
+    .mail-form-body{
+        width: 300px;
+    }
+}
