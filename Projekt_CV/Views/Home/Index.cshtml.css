@@ -22,15 +22,17 @@ h3 {
 .description {
     display: flex;
 }
+
 @media (max-width: 1399px) {
     .description {
         display: flex;
     }
-    
+
     video {
         width: 560px;
     }
 }
+
 @media (max-width: 1199px) {
     .description {
         display: flex;
@@ -40,6 +42,7 @@ h3 {
         width: 460px;
     }
 }
+
 @media (max-width: 991px) {
     .description {
         display: flex;
@@ -47,20 +50,19 @@ h3 {
         justify-content: center;
         align-items: center;
     }
-    
+
     video {
         width: 100%;
         height: auto;
         margin: 2rem 0;
     }
+
     .social-media {
         width: 100% !important;
     }
+
     .lower-description {
         width: 100% !important;
-    }
-    .buttons{
-        text-align: center;
     }
 }
 
@@ -88,12 +90,13 @@ li {
 .icon {
     width: 3rem;
 }
-.projects{
+
+.projects {
     display: flex;
     justify-content: space-between;
 }
 
-#card-second{
+#card-second {
     margin-left: 4rem;
 }
 
@@ -122,7 +125,7 @@ li {
     padding: 22px 38px;
     text-decoration: none;
     text-shadow: 0px 0px 50px #2f6627;
-    margin-left: 2rem;
+    width: 215.84px !important;
 }
 
 .contact {
@@ -134,8 +137,7 @@ li {
 }
 
 .contact-left-text {
-    width: 34%;
-    margin-left: 3rem;
+    width: 40%;
 }
 
 .contact-form {
@@ -152,21 +154,36 @@ li {
     font-size: 2rem;
 }
 
-.contact-mail:hover {
-    border-bottom: 1px solid white;
-}
+    .contact-mail:hover {
+        border-bottom: 1px solid white;
+    }
 
-.alert-success{
+.alert-success {
     font-size: 1.4rem;
     width: 10rem;
 }
-#send-img{
+
+#send-img {
     width: 1.8rem;
     margin-left: 0.2rem;
 }
-.topic{
+
+.topic {
     font-size: 1.2rem;
 }
-.body-text{
+
+.body-text {
     font-size: 1.2rem;
+}
+
+@media (max-width: 503px) {
+    .my-projects-button {
+        margin-left: 0rem !important;
+    }
+}
+
+@media (min-width: 504px) {
+    .my-projects-button {
+        margin-left: 2rem !important;
+    }
 }
