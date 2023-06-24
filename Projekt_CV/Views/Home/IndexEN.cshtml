@@ -1,0 +1,102 @@
+﻿@model Projekt_CV.Models.MailModel
+@{
+	ViewData["Title"] = "Home Page";
+}
+@if (TempData["Success"] != null)
+{
+	<div class="container d-flex justify-content-center">
+		<div class="alert alert-success text-center" role="alert">
+			Sent!
+		</div>
+	</div>
+}
+
+<div class="container">
+	<div class="description">
+		<div class="description-upper">
+			<h1>Kamil Kula</h1>
+			<h2 class="profession">3rd year computer science student</h2>
+			<p class="lower-description">
+				I am a third year student
+				computer science at school
+				of the Main Farm
+				rural. I'm 21.
+				I'm interested in
+				programming and
+				math, i like to study
+				new things. I serve
+				into English on
+				B2 level.
+			</p>
+			<div class="buttons">
+				<input type="button" value="Text me" class="contactme-button" />
+				<input type="button" value="My projects" class="my-projects-button" />
+			</div>
+			<div class="social-media">
+				<ul>
+					<li><a href="https://facebook.com"><img src="~/Images/facebook_icon.svg" class="icon" /></a></li>
+					<li><a href="https://instagram.com"><img src="~/Images/instagram_icon.svg" class="icon" /></a></li>
+					<li><a href="https://linkedin.com"><img src="~/Images/linkedin_icon.svg" class="icon" /></a></li>
+					<li><a href="https://twitter.com"><img src="~/Images/twitter_icon.svg" class="icon" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<video width="760" height="660" playsinline autoplay loop muted>
+			<source src="~/Videos/BeginningVideo.mp4" type="video/mp4">
+			<source src="movie.ogg" type="video/ogg">
+			Your browser does not support the video tag.
+		</video>
+
+	</div>
+	<div class="portfolio">
+		<h3>Created projects</h3>
+		<div class="projects">
+			<div class="card" style="width: 38rem;">
+				<img src="~/Images/QuizApp.png" id="card-img" />
+				<div class="card-body">
+					<h5 class="card-title">Quiz App</h5>
+					<p class="card-text">A web application that allows you to create abcd tests (adding your own questions and answers) and allowing you to easily manage added questions and answers. The application was created using the following technologies: HTML, CSS, JavaScript.</p>
+					<a href="https://github.com/KamilKula5/Quiz_app" class="btn btn-primary">See the project</a>
+				</div>
+			</div>
+			<div class="card" id="card-second" style="width: 38rem;">
+				<img src="~/Images/MatrixCalculator.png" id="card-img" />
+				<div class="card-body" id="card-body-matrix">
+					<h5 class="card-title">matrix calculator</h5>
+					<p class="card-text">A desktop application that performs operations on 3x3 matrices (addition, subtraction, multiplication). Application created using technologies: Windows Forms and C#</p>
+					<a href="https://github.com/KamilKula5/KalkulatorMacierzy" class="btn btn-primary" id="second-button">See the project</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+<div class="contact">
+	<div class="contact-left-text">
+		<h3>Text me</h3>
+		<p class="contact-info">
+			I am open to an IT internship or job offer, if you have any proposal - fill out the contact form and I will reply as soon as possible.
+		</p>
+		<a class="contact-mail" href="mailto:koncowyprojekt1@gmail.com">
+			koncowyprojekt1@gmail.com
+		</a>
+	</div>
+	<div class="contact-form">
+		<fieldset>
+			<legend>
+				Send an email!
+			</legend>
+			@using (Html.BeginForm())
+			{
+				<p class="topic">Topic: </p>
+				<p>@Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger" })</p>
+				<p class="topic-text-outer">@Html.TextBoxFor(m=>m.Subject, new {@class = "mail-form"})</p>
+				<p class="body-text">Text: </p>
+				<p>@Html.ValidationMessageFor(m => m.Body, "", new { @class = "text-danger" })</p>
+				<p class="body-text-outer">@Html.TextAreaFor(m=>m.Body, new {@class = "mail-form-body"})</p>
+				<button type="submit" id="send" value="Send" asp-controller="SendMail" asp-action="Index">Send<img src="~/Images/send.svg" id="send-img" /></button>
+			}
+		</fieldset>
+	</div>
+</div>

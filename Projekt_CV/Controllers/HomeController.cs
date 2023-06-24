@@ -17,8 +17,12 @@ namespace Projekt_CV.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+		public IActionResult IndexEN()
+		{
+            TempData["English"] = "zmieniony";
+			return View();
+		}
+		public IActionResult Privacy()
         {
             return View();
         }
@@ -28,5 +32,6 @@ namespace Projekt_CV.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        
     }
 }

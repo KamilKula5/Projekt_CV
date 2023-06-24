@@ -20,7 +20,9 @@ html {
 body {
     margin-bottom: 60px;
 }
-
+.icon{
+    width: 3rem;
+}
 .mail-form {
     width: 40rem;
     border-radius: 1.5rem;
@@ -105,4 +107,13 @@ form {
     .mail-form-body{
         width: 300px;
     }
+}
+
+.flag {
+    width: 3rem;
+    height: 1.5rem;
+}
+#send-img {
+    width: 1.8rem;
+    margin-left: 0.2rem;
 }
