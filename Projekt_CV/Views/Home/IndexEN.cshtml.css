@@ -90,6 +90,7 @@ ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    padding-left: 0;
 }
 
 li {
@@ -97,7 +98,9 @@ li {
 }
 
 .social-media {
-    width: 86%;
+    width: 85%;
+    display: flex;
+    justify-content: center;   
 }
 
 .icon {
@@ -176,6 +179,7 @@ li {
     font-size: 1.4rem;
     width: 10rem;
 }
+
 
 #send-img {
     width: 1.8rem;
